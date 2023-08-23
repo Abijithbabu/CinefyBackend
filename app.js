@@ -12,7 +12,7 @@ dotenv.config()
 const app = express()
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3000'],
+    origin: ['https://cinefy-tsnf.onrender.com'],
   }));
 app.use(cookieParser())
 app.use(express.json())
@@ -34,7 +34,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://cinefy-tsnf.onrender.com",
     credentials: true,
   }, 
 });
